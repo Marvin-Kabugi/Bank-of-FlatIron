@@ -1,8 +1,13 @@
 import React from "react";
 
-function TableRow(){
+function TableRow({ date, description, category, amount }){
     return(
-        <tr></tr>
+        <tr className="rows">
+            <td>{date}</td>
+            <td>{description}</td>
+            <td>{category}</td>
+            <td>{amount}</td>
+        </tr>
     )
 }
 

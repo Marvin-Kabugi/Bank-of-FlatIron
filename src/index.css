@@ -4,30 +4,116 @@
   box-sizing: border-box;
 }
 body{
-  margin: 0 0.3rem
+  margin: 0 0.3rem;
+  box-shadow: 1px 1px 10px 1px rgb(187, 187, 187);
+  padding: 0 0 0.8em;
 }
 
 .title {
   padding: 0.5rem;
   margin-bottom: 0.5rem;
+  border-radius: 3px;
   background-color: rgba(68, 18, 206, 0.862);
   text-align: center;
   color: white;
   font-size: 1.5rem;
 }
 
-table {
-  border-collapse: collapse;
+.input-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 0.5rem ;
+  text-align: center;
+}
+.search-input{
+  margin: auto;
+  width: 100%;
+  padding: 1em;
+  border: 1px solid gray;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px 1px rgb(229, 226, 226);
+}
+img{
+  height: 15px;
+  width: 15px;
+  vertical-align: middle;
+}
+.image-button{
+  position: absolute;
+  right: 0.5rem;
+  top: 0.55rem;
+  height: 25px;
+  width: 25px;
+  padding: 2px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  border: 1px solid rgb(220, 219, 219);
+  border-radius: 50%;
+  text-align: center;
+}
+
+.form-input{
+  border: 1px solid grey;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px 1px rgb(229, 226, 226);
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 10%
+}
+input {
+  padding: 0.3rem;
+  margin: 0.2rem;
+  width: 24%;
+  border: 1px solid gray;
+  border-radius: 0.3em;
+}
+
+label {
+  width: 24%;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+label > input {
   width: 100%;
 }
 
+/* input[type="submit"]{
+
+} */
+
+input[type=text]:focus {
+  border: 1px solid red;
+}
+
+table {
+  border-collapse: collapse;
+  border-radius: 0.2em;
+  width: 100%;
+  border-style: hidden; 
+  box-shadow: 0 0 0 1px #666;
+}
+
 td, th {
-  border: 1px solid grey;
-  box-shadow: 1px 1px grey;
+  border: 1px solid rgb(194, 189, 189);
+  box-shadow: 1px 1px  rgb(229, 226, 226);
   text-align: center;
   padding: 0.5rem;
 }
 
-tr:nth-child(even){
-  background-color: antiquewhite;
+tr:nth-child(odd){
+  background-color:rgba(127, 127, 127, 0.129);
+  
+}
+
+table thead tr:nth-of-type(1){
+  background-color: white;
 }
