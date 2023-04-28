@@ -6,6 +6,7 @@ import Form from './Form';
 
 function App() {
   const [appData, setData] = useState([]);
+  const [search, setSearch] = useState("")
 
   useEffect(() => {
     console.log('once')
@@ -22,13 +23,18 @@ function App() {
     setData([...appData, data]);
   }
 
+  const dataToPass = appData.filter(data => data.description.includes(search))
+  
+
   return (
-    <div className="App">
+    <>
       <h3 className="title">The Royal Bank of FlatIron</h3>
-      <Search />
+      <div className="App">
+      <Search search={search} onChangeSearch={setSearch}/>
       <Form onAddData={addAppData}/>
-      <Table data={ appData } onAddData={addAppData}/>
+      <Table data={ dataToPass } onAddData={addAppData}/>
     </div>
+    </>  
   );
 }
 
