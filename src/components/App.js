@@ -8,21 +8,21 @@ function App() {
   const [appData, setData] = useState([]);
   const [search, setSearch] = useState("")
 
+// Fetch data
   useEffect(() => {
-    console.log('once')
     fetch("http://localhost:3000/transactions")
       .then(response => response.json())
       .then(data => {
-        // console.log(data);
         setData([...appData, ...data ])
       });
   }, []);
-  console.log("out Of Effect", appData);
 
+  // Add new data to appData
   function addAppData(data){
     setData([...appData, data]);
   }
 
+  // Filter data before passing as props
   const dataToPass = appData.filter(data => data.description.includes(search))
   
 

@@ -1,5 +1,6 @@
 import React from "react";
 
+
 function TableRow({ date, description, category, amount }){
     return(
         <tr className="rows">

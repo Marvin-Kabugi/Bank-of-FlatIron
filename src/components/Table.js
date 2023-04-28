@@ -2,6 +2,7 @@ import React from "react";
 import TableRow from "./TableRow"
 
 function Table({ data }){
+    // map data to new list containing JSX elements to be rendered
     const dataList = data.map(data => {
         return <TableRow key={data.id} date={data.date} description={data.description} category={data.category} amount={data.amount}/>
     })
